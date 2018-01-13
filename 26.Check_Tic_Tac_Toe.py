@@ -34,7 +34,7 @@ def win(board):  # See who wins, Diagonal, Row & Column
             return [1, board]
     same3 = []
 
-    '''Vertical - Not working yet'''
+    '''Vertical'''
     for i in range(0, 3):
         same3 = [row[i] for row in board]
         if(same(same3) == 1):
@@ -54,8 +54,8 @@ def write(board, Player):
 
 
 def game(board):  # Main Game Event
-    P1 = 1
-    P2 = 2
+    P1 = 'x'
+    P2 = 'O'
 
     while(1):
         print('Player P1 which index[i][j] do you choose? ')
@@ -75,5 +75,5 @@ def game(board):  # Main Game Event
             exit(0)
 
 
-board = [[0 for a in range(0, 3)] for b in range(0, 3)]  # Blank Board created
+board = [[0 for a in range(3)] for b in range(3)]  # Blank Board created
 game(board)
